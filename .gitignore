@@ -39,3 +39,15 @@ lerna-debug.log*
 # Yarn
 .yarn/*
 !.yarn/releases
+
+# DS Store
+.DS_Store
+.prettierignore
+
+# Xd
+*.xd
+
+# Sketch
+*.sketch
+# Figma
+*.fig
