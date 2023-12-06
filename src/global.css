@@ -5,17 +5,3 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@font-face {
-    font-family: "League Spartan";
-    src: url("/fonts/LeagueSpartan-Black.ttf") format("truetype"),
-         url("/fonts/LeagueSpartan-Bold.ttf") format("truetype"),
-         url("/fonts/LeagueSpartan-ExtraBold.ttf") format("truetype"),
-         url("/fonts/LeagueSpartan-Light.ttf") format("truetype"),
-         url("/fonts/LeagueSpartan-Medium.ttf") format("truetype"),
-         url("/fonts/LeagueSpartan-Regular.ttf") format("truetype"),
-         url("/fonts/LeagueSpartan-SemBold.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}

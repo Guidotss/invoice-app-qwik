@@ -17,7 +17,11 @@ module.exports = {
         'purple'          : '#7C5DFA',
         'soft-periwinkle' : '#7E88C3',
       },
+      fontFamily: { 
+        'league-spartan' : ['League Spartan', 'sans-serif'],
+      },
     },
+    
   },
   plugins: [],
 };
