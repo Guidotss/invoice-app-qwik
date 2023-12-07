@@ -5,3 +5,38 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.bg-paid {
+  @apply bg-green-600 bg-opacity-10;
+}
+
+.bg-pending {
+  @apply bg-yellow-500 bg-opacity-10;
+}
+
+.bg-draft {
+  @apply bg-manatee bg-opacity-10;
+}
+.text-paid {
+  @apply text-green-400;
+}
+
+.text-pending {
+  @apply text-yellow-500;
+}
+
+.text-draft {
+  @apply text-manatee;
+}
+
+.circle-paid {
+  @apply bg-green-500;
+}
+
+.circle-pending {
+  @apply bg-yellow-500;
+}
+
+.circle-draft {
+  @apply bg-manatee;
+}

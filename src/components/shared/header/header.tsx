@@ -8,14 +8,14 @@ export default component$(() => {
     isCustomSelectOpen.value = !isCustomSelectOpen.value;
   }); 
   return (
-    <header class="flex w-2/3 items-center justify-center">
+    <header class="flex w-1/2 items-center justify-center">
       <div class="flex w-full flex-col">
         <h1 class="mb-2 text-4xl font-bold text-light-gray">Invoices</h1>
         <p class="text-sm font-semibold text-periwinkle">
           There are 7 total invoices
         </p>
       </div>
-      <div class="flex w-full items-center justify-center gap-x-10">
+      <div class="flex w-full items-center justify-end gap-x-10 ">
         <div class="flex cursor-pointer items-center gap-2" onClick$={toggleCustomSelect}>
           <span class="font-semibold text-light-gray">Filter by status</span>
           <CustomSelect isOpen={isCustomSelectOpen.value} />

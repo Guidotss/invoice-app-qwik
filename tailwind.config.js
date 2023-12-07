@@ -16,6 +16,9 @@ module.exports = {
         'periwinkle'      : '#DFE3FA',
         'purple'          : '#7C5DFA',
         'soft-periwinkle' : '#7E88C3',
+        'paid'            : '#33D69F', 
+        'pending'         : '#FF8F00',
+        
       },
       fontFamily: { 
         'league-spartan' : ['League Spartan', 'sans-serif'],

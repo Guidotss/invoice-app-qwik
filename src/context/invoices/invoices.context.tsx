@@ -1,9 +1,9 @@
 import { createContextId } from "@builder.io/qwik";
 import type { Invoice } from "~/interfaces";
 
-export interface InvoiceContext { 
+export interface InvoiceContextProps { 
   invoices: Invoice[];
 }
 
-export const SharesListContextId =
-  createContextId<InvoiceContext>("invoices-context");
+export const InvoiceContext =
+  createContextId<InvoiceContextProps>("invoices-context");
