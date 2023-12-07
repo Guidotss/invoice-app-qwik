@@ -1,9 +1,12 @@
 import { component$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
+import { EmptyHome } from "~/components/home";
 export default component$(() => {
   return (
     <>
-      <h1 class="text-xl text-white">Welcome to Qwik</h1>
+      <div class="flex h-full flex-col items-center justify-center">
+        <EmptyHome />
+      </div>
     </>
   );
 });
