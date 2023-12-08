@@ -1,6 +1,8 @@
 import { $, component$, useSignal } from "@builder.io/qwik";
 import { MoonIcon, SunIcon } from "../icons/icons";
 import { Link } from "@builder.io/qwik-city";
+import ThunderImg from "~/media/thunder.png";
+import Avatar from "~/media/avatar.jpg";
 
 export default component$(() => {
   const isDarkMode = useSignal<boolean>(true);
@@ -15,9 +17,9 @@ export default component$(() => {
         <header class="h-full">
           <Link href="/">
             <img
-              src="src\media\thunder.png"
+              src={ThunderImg}
               alt="Thunder"
-              class="mx-auto mt-5 h-20 w-20"
+              class="mx-auto mt-5 cursor-pointer"
               height={80}
               width={80}
             />
@@ -28,7 +30,7 @@ export default component$(() => {
         </i>
         <footer class="flex w-full items-center justify-center border-t-[1px] border-t-manatee p-2">
           <img
-            src="assets\image-avatar.jpg"
+            src={Avatar}
             alt="Avatar"
             class="mx-auto mt-5 cursor-pointer rounded-full"
             height={50}

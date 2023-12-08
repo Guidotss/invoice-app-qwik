@@ -1,7 +1,8 @@
 import { component$, Slot } from "@builder.io/qwik";
 import { routeLoader$ } from "@builder.io/qwik-city";
 import type { RequestHandler } from "@builder.io/qwik-city";
-import { Header, Sidebar } from "~/components/shared";
+import { Sidebar } from "~/components/shared";
+
 import InvoicesProvider from "~/context/invoices/invoices-provider";
 
 export const onGet: RequestHandler = async ({ cacheControl }) => {
@@ -23,7 +24,6 @@ export default component$(() => {
       <Sidebar />
       <InvoicesProvider>
         <main class="flex flex-1 flex-col items-center py-10">
-          <Header />
           <Slot />
         </main>
       </InvoicesProvider>

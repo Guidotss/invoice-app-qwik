@@ -1,13 +1,18 @@
-import { component$, useStore, $, type QwikMouseEvent } from "@builder.io/qwik";
+import {
+  component$,
+  useStore,
+  $,
+  type QwikMouseEvent,
+  useSignal,
+} from "@builder.io/qwik";
+import { ArrowDown } from "~/components/icons/icons";
 import { customSelectOptions } from "~/constants";
 
 type Status = { id: number; name: string; isSelected: boolean };
 
-interface Props {
-  isOpen: boolean;
-}
-export default component$(({ isOpen }: Props) => {
+export default component$(() => {
   const status = useStore<readonly Status[]>(customSelectOptions);
+  const isOpen = useSignal<boolean>(false);
 
   const toggleStatus = $(
     (event: QwikMouseEvent<HTMLLIElement, MouseEvent>, id: number) => {
@@ -24,9 +29,19 @@ export default component$(({ isOpen }: Props) => {
     },
   );
 
+  const toggleIsOpen = $(() => {
+    isOpen.value = !isOpen.value;
+  });
+
   return (
-    <>
-      {isOpen && (
+    <div class="flex cursor-pointer items-center gap-2">
+      <div class="flex items-center gap-x-2" onClick$={toggleIsOpen}>
+        <span class="font-semibold text-light-gray">Filter by status</span>
+        <i>
+          <ArrowDown />
+        </i>
+      </div>
+      {isOpen.value && (
         <ul class="absolute top-24 w-40 overflow-hidden rounded-lg bg-midnight-blue shadow-lg lg:right-[32vw]">
           {status.map((status, index) => (
             <li
@@ -40,6 +55,6 @@ export default component$(({ isOpen }: Props) => {
           ))}
         </ul>
       )}
-    </>
+    </div>
   );
 });
