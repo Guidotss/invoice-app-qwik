@@ -8,7 +8,7 @@ export default component$(() => {
 
   return (
     <>
-      <div class="mt-5 flex w-1/2 flex-col gap-5">
+      <div class="mt-5 flex 2xl:w-1/2 lg:w-2/3 lg:h-[80vh] flex-col gap-5 overflow-y-scroll invoice-scroll">
         {invoices.map((invoice: Invoice) => (
           <InvoiceCard key={invoice.id} invoice={invoice} />
         ))}

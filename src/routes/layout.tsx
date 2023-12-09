@@ -23,7 +23,7 @@ export default component$(() => {
     <div class="flex h-screen w-full bg-midnight-black">
       <Sidebar />
       <InvoicesProvider>
-        <main class="flex flex-1 flex-col items-center py-10">
+        <main class="flex flex-1 flex-col items-center 2xl:py-10 md:py-2 overflow-hidden">
           <Slot />
         </main>
       </InvoicesProvider>

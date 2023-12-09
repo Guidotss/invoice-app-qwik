@@ -20,7 +20,7 @@ export default component$(({ invoice }: Props) => {
   });
   return (
     <div
-      class="flex cursor-pointer items-center justify-between rounded-lg bg-midnight-blue px-10 py-6 duration-300 ease-in-out hover:opacity-90"
+      class="flex cursor-pointer items-center justify-between rounded-lg bg-midnight-blue px-10 2xl:py-6 lg:py-4 duration-300 ease-in-out hover:opacity-90 mr-3"
       onClick$={navigateToInvoice}
     >
       <div class="flex items-center gap-x-10 text-light-gray">

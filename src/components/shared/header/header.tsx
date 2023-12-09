@@ -7,7 +7,7 @@ interface Props {
 
 export default component$(({ styles }: Props) => {
   return (
-    <header class={`flex w-1/2 items-center justify-center ${styles}`}>
+    <header class={`flex 2xlw-1/2 md:w-2/3 items-center justify-center ${styles}`}>
       <Slot name="header-titles" />
       <Slot name="buttons-container" />
     </header>
