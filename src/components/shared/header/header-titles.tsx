@@ -6,13 +6,35 @@ interface Props {
   subtitle: string;
   titleStyles?: string;
   subtitleStyles?: string;
+  circleDecorator?: boolean;
+  circleDecoratorStyles?: string;
 }
 export default component$(
-  ({ title, subtitle, titleStyles, subtitleStyles, column }: Props) => {
+  ({
+    title,
+    subtitle,
+    titleStyles,
+    subtitleStyles,
+    column,
+    circleDecorator,
+    circleDecoratorStyles,
+  }: Props) => {
     return (
-      <div class={`flex w-full ${column ? "flex-col" : "flex-row"}`}>
+      <div
+        class={`flex w-full ${column ? "flex-col" : "flex-row items-center"}`}
+      >
         <h1 class={titleStyles}>{title}</h1>
-        <h2 class={subtitleStyles}>{subtitle}</h2>
+
+        <div class={`flex items-center capitalize ${subtitleStyles}`}>
+          {circleDecorator && (
+            <div
+              class={`h-3 w-3 rounded-full ${
+                circleDecoratorStyles || "bg-white"
+              }`}
+            ></div>
+          )}
+          <h2>{subtitle}</h2>
+        </div>
       </div>
     );
   },

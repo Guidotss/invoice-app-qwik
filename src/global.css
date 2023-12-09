@@ -52,3 +52,7 @@
 .invoice-scroll::-webkit-scrollbar-thumb{
   @apply bg-purple rounded-lg  
 }
+
+.btn { 
+  @apply text-light-gray font-bold rounded-full px-5 outline-none
+}
