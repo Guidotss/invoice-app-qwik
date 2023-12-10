@@ -7,7 +7,7 @@ interface Props {
 }
 export default component$(({ invoice }: Props) => {
   return (
-    <div class="mt-10 rounded-lg bg-midnight-blue p-10 2xl:w-1/2">
+    <div class="mt-10 rounded-lg bg-midnight-blue p-10 2xl:w-1/2 w-2/3 overflow-y-scroll invoice-scroll">
       <header class="flex w-full items-center justify-between">
         <div>
           <h3 class="text-xl font-bold text-light-gray">
