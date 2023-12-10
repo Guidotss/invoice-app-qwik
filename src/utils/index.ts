@@ -1,3 +1,3 @@
 
-export * from './get-month';
+export * from './get-date';
 export * from './set-status-color';

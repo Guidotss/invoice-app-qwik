@@ -1,7 +1,7 @@
 import { $, component$ } from "@builder.io/qwik";
 import type { Invoice } from "~/interfaces";
 import {
-  getMonth,
+  getDate,
   setCircleColor,
   setStatusColor,
   setStatusText,
@@ -26,7 +26,7 @@ export default component$(({ invoice }: Props) => {
       <div class="flex items-center gap-x-10 text-light-gray">
         <h3 class="font-bold">#{invoice.id}</h3>
         <h5 class="text-sm text-periwinkle">
-          Due {getMonth(new Date(invoice.createdAt))}
+          Due {getDate(new Date(invoice.createdAt))}
         </h5>
         <h4 class="text-light-gray">{invoice.clientName}</h4>
       </div>
