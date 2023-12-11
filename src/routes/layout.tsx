@@ -1,9 +1,10 @@
 import { component$, Slot } from "@builder.io/qwik";
 import { routeLoader$ } from "@builder.io/qwik-city";
 import type { RequestHandler } from "@builder.io/qwik-city";
+import SideMenu from "~/components/invoices/side-menu";
 import { Sidebar } from "~/components/shared";
 
-import InvoicesProvider from "~/context/invoices/invoices-provider";
+import Providers from "~/providers/providers";
 
 export const onGet: RequestHandler = async ({ cacheControl }) => {
   cacheControl({
@@ -20,13 +21,12 @@ export const useServerTimeLoader = routeLoader$(() => {
 
 export default component$(() => {
   return (
-    <div class="flex h-screen w-full bg-midnight-black">
-      <Sidebar />
-      <InvoicesProvider>
-        <main class="flex flex-1 flex-col items-center 2xl:py-10 md:py-2 overflow-hidden">
-          <Slot />
-        </main>
-      </InvoicesProvider>
-    </div>
+    <Providers>
+      <main class="flex overflow-hidden">
+        <Sidebar />
+        <SideMenu />
+        <Slot />
+      </main>
+    </Providers>
   );
 });

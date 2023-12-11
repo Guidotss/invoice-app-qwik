@@ -9,7 +9,7 @@ import { InvoiceContext } from "~/context/invoices/invoices.context";
 export default component$(() => {
   const { invoices } = useContext(InvoiceContext);
   return (
-    <>
+    <div class="flex h-screen w-full flex-col items-center justify-center  bg-midnight-black">
       <Header>
         <HeaderTitles
           column
@@ -30,7 +30,7 @@ export default component$(() => {
       <div class="flex h-full w-full flex-col items-center justify-center">
         {invoices.length ? <InvoicesList /> : <EmptyHome />}
       </div>
-    </>
+    </div>
   );
 });
 

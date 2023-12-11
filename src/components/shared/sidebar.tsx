@@ -12,32 +12,30 @@ export default component$(() => {
   });
 
   return (
-    <>
-      <aside class="flex w-24 flex-col items-center rounded-br-[30px] rounded-tr-[30px] bg-midnight-blue">
-        <header class="h-full">
-          <Link href="/">
-            <img
-              src={ThunderImg}
-              alt="Thunder"
-              class="mx-auto mt-5 cursor-pointer"
-              height={80}
-              width={80}
-            />
-          </Link>
-        </header>
-        <i class="cursor-pointer py-8" onClick$={toggleDarkMode}>
-          {isDarkMode.value ? <SunIcon /> : <MoonIcon />}
-        </i>
-        <footer class="flex w-full items-center justify-center border-t-[1px] border-t-manatee p-2">
+    <aside class="flex h-screen w-24 flex-col items-center rounded-br-[30px] rounded-tr-[30px] bg-midnight-blue">
+      <header class="h-full">
+        <Link href="/">
           <img
-            src={Avatar}
-            alt="Avatar"
-            class="mx-auto mt-5 cursor-pointer rounded-full"
-            height={50}
-            width={50}
+            src={ThunderImg}
+            alt="Thunder"
+            class="mx-auto mt-5 cursor-pointer"
+            height={80}
+            width={80}
           />
-        </footer>
-      </aside>
-    </>
+        </Link>
+      </header>
+      <i class="cursor-pointer py-8" onClick$={toggleDarkMode}>
+        {isDarkMode.value ? <SunIcon /> : <MoonIcon />}
+      </i>
+      <footer class="flex w-full items-center justify-center border-t-[1px] border-t-manatee p-2">
+        <img
+          src={Avatar}
+          alt="Avatar"
+          class="mx-auto mt-5 cursor-pointer rounded-full"
+          height={50}
+          width={50}
+        />
+      </footer>
+    </aside>
   );
 });

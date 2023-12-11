@@ -1,4 +1,5 @@
 import { $, component$ } from "@builder.io/qwik";
+import { useNavigate } from "@builder.io/qwik-city";
 import type { Invoice } from "~/interfaces";
 import {
   getDate,
@@ -7,7 +8,6 @@ import {
   setStatusText,
 } from "~/utils";
 import { ArrowRight } from "../icons/icons";
-import { useNavigate } from "@builder.io/qwik-city";
 
 interface Props {
   invoice: Invoice;
@@ -20,7 +20,7 @@ export default component$(({ invoice }: Props) => {
   });
   return (
     <div
-      class="flex cursor-pointer items-center justify-between rounded-lg bg-midnight-blue px-10 2xl:py-6 lg:py-4 duration-300 ease-in-out hover:opacity-90 mr-3"
+      class="mr-3 flex cursor-pointer items-center justify-between rounded-lg bg-midnight-blue px-10 duration-300 ease-in-out hover:opacity-90 lg:py-4 2xl:py-6"
       onClick$={navigateToInvoice}
     >
       <div class="flex items-center gap-x-10 text-light-gray">

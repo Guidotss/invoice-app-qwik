@@ -24,7 +24,7 @@ export default component$(() => {
 
   return (
     <>
-      <div class="mb-3 flex w-2/3 items-center gap-x-3 2xl:w-1/2">
+      <div class="flex w-2/3 items-center gap-x-3 2xl:w-1/2 mb-3">
         <i>
           <ArrowLeft />
         </i>
@@ -32,7 +32,7 @@ export default component$(() => {
           Go back
         </Link>
       </div>
-      <Header styles="bg-midnight-blue rounded-md 2xl:p-8 p-5">
+      <Header styles="bg-midnight-blue rounded-lg 2xl:p-8 p-5">
         <HeaderTitles
           q:slot="header-titles"
           circleDecorator

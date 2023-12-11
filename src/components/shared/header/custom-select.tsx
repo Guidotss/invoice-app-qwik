@@ -42,7 +42,7 @@ export default component$(() => {
         </i>
       </div>
       {isOpen.value && (
-        <ul class="absolute 2xl:top-24 lg:top-20 w-40 overflow-hidden rounded-lg bg-midnight-blue shadow-lg 2xl:right-[32vw] lg:right-[30vw]">
+        <ul class="absolute w-40 overflow-hidden rounded-lg bg-midnight-blue shadow-lg lg:right-[30vw] lg:top-20 2xl:right-[32vw] 2xl:top-24">
           {status.map((status, index) => (
             <li
               key={status.id}

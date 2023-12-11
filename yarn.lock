@@ -256,6 +256,11 @@
     unist-util-visit "^4.0.0"
     vfile "^5.0.0"
 
+"@modular-forms/qwik@^0.21.2":
+  version "0.21.2"
+  resolved "https://registry.yarnpkg.com/@modular-forms/qwik/-/qwik-0.21.2.tgz#7e603c09acc24434c5ec89ea04de71a171ddcddf"
+  integrity sha512-oz+78uZPhg422wyF3UitgzjXakJ+KuqiyvYTlZpn9+R07eJPs9xpVQ+9zQLnbFrNnGWC5zNEj8wyRMruk+lLyQ==
+
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"
   resolved "https://registry.yarnpkg.com/@nodelib/fs.scandir/-/fs.scandir-2.1.5.tgz#7619c2eb21b25483f6d167548b4cfd5a7488c3d5"
@@ -485,6 +490,11 @@ ajv@^6.12.4:
     fast-json-stable-stringify "^2.0.0"
     json-schema-traverse "^0.4.1"
     uri-js "^4.2.2"
+
+animate.css@^4.1.1:
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/animate.css/-/animate.css-4.1.1.tgz#614ec5a81131d7e4dc362a58143f7406abd68075"
+  integrity sha512-+mRmCTv6SbCmtYJCN4faJMNFVNN5EuCTTprDTAo7YzIGji2KADmakjVA3+8mVDkZ2Bf09vayB35lSQIex2+QaQ==
 
 ansi-regex@^5.0.1:
   version "5.0.1"
@@ -3329,6 +3339,11 @@ uvu@^0.5.0:
     diff "^5.0.0"
     kleur "^4.0.3"
     sade "^1.7.3"
+
+valibot@^0.24.1:
+  version "0.24.1"
+  resolved "https://registry.yarnpkg.com/valibot/-/valibot-0.24.1.tgz#c51b2f3f0806e59f60f266fcff06185dcc1fabbf"
+  integrity sha512-Toclbuy20XsECZiueh2dkQ63he2AGaBIj/FJRDAFti2kueFldm9bjJzSYvPaL5CE1HXDMRhq7olak8at7xCz5A==
 
 vfile-message@^3.0.0:
   version "3.1.4"
