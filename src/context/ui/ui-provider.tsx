@@ -8,12 +8,12 @@ import {
 import { UiContext, type UiContextProps } from "./ui.context";
 
 export default component$(() => {
-  const { isDarkmode, isSideMenuOpen } = useStore<UiContextProps>({
+  const uiState = useStore<UiContextProps>({
     isDarkmode: false,
     isSideMenuOpen: false,
   });
 
-  useContextProvider(UiContext, { isDarkmode, isSideMenuOpen });
+  useContextProvider(UiContext, uiState);
 
   useVisibleTask$(() => {
     const theme = localStorage.getItem("theme");

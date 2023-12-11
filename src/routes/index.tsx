@@ -5,11 +5,13 @@ import InvoicesList from "~/components/invoices/invoices-list";
 import { Header, HeaderTitles, NewInvoice } from "~/components/shared";
 import CustomSelect from "~/components/shared/header/custom-select";
 import { InvoiceContext } from "~/context/invoices/invoices.context";
+import { useUiStore } from "~/utils/hooks/useUiStore";
 
 export default component$(() => {
   const { invoices } = useContext(InvoiceContext);
+  const { isDarkMode } = useUiStore(); 
   return (
-    <div class="flex h-screen w-full flex-col items-center justify-center  bg-midnight-black">
+    <div class={`flex h-screen w-full flex-col items-center justify-center  ${isDarkMode.value ? "bg-midnight-black" : "bg-light-gray"}`}>
       <Header>
         <HeaderTitles
           column

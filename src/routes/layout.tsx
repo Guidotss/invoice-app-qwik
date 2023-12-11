@@ -1,4 +1,4 @@
-import { component$, Slot } from "@builder.io/qwik";
+import { component$, Slot, } from "@builder.io/qwik";
 import { routeLoader$ } from "@builder.io/qwik-city";
 import type { RequestHandler } from "@builder.io/qwik-city";
 import SideMenu from "~/components/invoices/side-menu";
@@ -20,6 +20,7 @@ export const useServerTimeLoader = routeLoader$(() => {
 });
 
 export default component$(() => {
+  
   return (
     <Providers>
       <main class="flex overflow-hidden">
