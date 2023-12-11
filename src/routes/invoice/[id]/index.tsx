@@ -2,9 +2,7 @@ import { component$, useContext, useStore } from "@builder.io/qwik";
 import { routeLoader$, type DocumentHead, Link } from "@builder.io/qwik-city";
 import { ArrowLeft } from "~/components/icons/icons";
 import InvoiceDetails from "~/components/invoices/invoice-details";
-import { Header } from "~/components/shared";
-import HeaderActionButtons from "~/components/shared/buttons/header-action-buttons";
-import HeaderTitles from "~/components/shared/header/header-titles";
+import { Header, HeaderTitles, HeaderActionButtons } from "~/components/shared";
 import { InvoiceContext } from "~/context/invoices/invoices.context";
 import { setCircleColor, setStatusColor, setStatusText } from "~/utils";
 
@@ -26,7 +24,7 @@ export default component$(() => {
 
   return (
     <>
-      <div class="mb-3 flex 2xl:w-1/2 items-center gap-x-3">
+      <div class="mb-3 flex w-2/3 items-center gap-x-3 2xl:w-1/2">
         <i>
           <ArrowLeft />
         </i>
@@ -34,7 +32,7 @@ export default component$(() => {
           Go back
         </Link>
       </div>
-      <Header styles="bg-midnight-blue rounded-md p-8">
+      <Header styles="bg-midnight-blue rounded-md 2xl:p-8 p-5">
         <HeaderTitles
           q:slot="header-titles"
           circleDecorator
@@ -49,7 +47,7 @@ export default component$(() => {
         </div>
       </Header>
 
-      <InvoiceDetails invoice={invoice!}/>
+      <InvoiceDetails invoice={invoice!} />
     </>
   );
 });
