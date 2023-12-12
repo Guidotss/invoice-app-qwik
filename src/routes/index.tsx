@@ -12,14 +12,14 @@ export default component$(() => {
   const { isDarkMode } = useUiStore(); 
   return (
     <div class={`flex h-screen w-full flex-col items-center justify-center  ${isDarkMode.value ? "bg-midnight-black" : "bg-light-gray"}`}>
-      <Header>
+      <Header styles="mt-10">
         <HeaderTitles
           column
           q:slot="header-titles"
           title="Invoices"
           titleStyles="text-white text-4xl font-bold mb-2"
           subtitle="There are 7 total invoices"
-          subtitleStyles="text-light-gray"
+          subtitleStyles="font-semibold"
         />
         <div
           q:slot="buttons-container"

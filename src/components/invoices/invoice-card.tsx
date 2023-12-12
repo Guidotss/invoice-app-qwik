@@ -8,6 +8,7 @@ import {
   setStatusText,
 } from "~/utils";
 import { ArrowRight } from "../icons/icons";
+import { useUiStore } from "~/utils/hooks/useUiStore";
 
 interface Props {
   invoice: Invoice;
@@ -15,23 +16,44 @@ interface Props {
 
 export default component$(({ invoice }: Props) => {
   const navigation = useNavigate();
+  const { isDarkMode } = useUiStore();
   const navigateToInvoice = $(() => {
     navigation("/invoice/" + invoice.id);
   });
   return (
     <div
-      class="mr-3 flex cursor-pointer items-center justify-between rounded-lg bg-midnight-blue px-10 duration-300 ease-in-out hover:opacity-90 lg:py-4 2xl:py-6"
+      class={`mr-3 flex cursor-pointer items-center justify-between rounded-lg ${
+        isDarkMode.value ? "bg-midnight-blue" : "bg-white shadow-lg"
+      } px-10 duration-300 ease-in-out hover:opacity-90 lg:py-4 2xl:py-6`}
       onClick$={navigateToInvoice}
     >
       <div class="flex items-center gap-x-10 text-light-gray">
-        <h3 class="font-bold">#{invoice.id}</h3>
-        <h5 class="text-sm text-periwinkle">
+        <h3 class={`font-bold ${!isDarkMode.value ? "text-deep-purple" : ""}`}>
+          #{invoice.id}
+        </h3>
+        <h5
+          class={`text-sm ${
+            isDarkMode.value ? "text-periwinkle" : "text-soft-periwinkle"
+          }`}
+        >
           Due {getDate(new Date(invoice.createdAt))}
         </h5>
-        <h4 class="text-light-gray">{invoice.clientName}</h4>
+        <h4
+          class={`${
+            isDarkMode.value
+              ? "text-light-gray"
+              : "font-semibold text-soft-periwinkle"
+          }`}
+        >
+          {invoice.clientName}
+        </h4>
       </div>
       <div class="flex items-center gap-5">
-        <h2 class="font-bold text-light-gray">
+        <h2
+          class={`font-bold ${
+            isDarkMode.value ? "text-light-gray" : "text-deep-purple"
+          }`}
+        >
           {invoice.total.toLocaleString("en-US", {
             style: "currency",
             currency: "GBP",

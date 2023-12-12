@@ -9,8 +9,16 @@ export default component$(() => {
   const { isDarkMode, toggleTheme } = useUiStore();
 
   return (
-    <div class={`${isDarkMode.value ? "bg-midnight-black" : "bg-light-gray"}`}>
-      <aside class="flex h-screen w-24 flex-col items-center rounded-br-[30px] rounded-tr-[30px] bg-midnight-blue">
+    <div
+      class={`${
+        isDarkMode.value ? "bg-midnight-black" : "bg-light-gray"
+      } transition-colors`}
+    >
+      <aside
+        class={`flex h-screen w-24 flex-col items-center rounded-br-[30px] rounded-tr-[30px] ${
+          isDarkMode.value ? "bg-midnight-blue" : "bg-charcoal-blue"
+        } transition-colors`}
+      >
         <header class="h-full">
           <Link href="/">
             <img

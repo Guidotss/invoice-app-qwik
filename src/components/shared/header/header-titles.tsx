@@ -1,4 +1,5 @@
 import { component$ } from "@builder.io/qwik";
+import { useUiStore } from "~/utils/hooks/useUiStore";
 
 interface Props {
   column?: boolean;
@@ -19,11 +20,12 @@ export default component$(
     circleDecorator,
     circleDecoratorStyles,
   }: Props) => {
+    const { isDarkMode } = useUiStore();
     return (
       <div
         class={`flex w-full ${column ? "flex-col" : "flex-row items-center"}`}
       >
-        <h1 class={titleStyles}>{title}</h1>
+        <h1 class={`${titleStyles} ${!isDarkMode.value && 'text-deep-purple'}`}>{title}</h1>
 
         <div class={`flex items-center capitalize ${subtitleStyles}`}>
           {circleDecorator && (
