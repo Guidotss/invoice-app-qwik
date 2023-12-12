@@ -9,19 +9,21 @@ import { UiContext, type UiContextProps } from "./ui.context";
 
 export default component$(() => {
   const uiState = useStore<UiContextProps>({
-    isDarkmode: false,
-    isSideMenuOpen: false,
+    isDarkmode: true,
+    isSideMenuOpen: true,
   });
 
   useContextProvider(UiContext, uiState);
 
-  useVisibleTask$(() => {
+  useVisibleTask$(({ track }) => {
     const theme = localStorage.getItem("theme");
     if (!theme) {
       localStorage.setItem("theme", "dark");
+      uiState.isDarkmode = true;
     } else {
-      localStorage.setItem("theme", theme === "dark" ? "light" : "dark");
+      uiState.isDarkmode = theme === "dark";
     }
+    track(() => uiState.isDarkmode);
   });
 
   return <Slot />;

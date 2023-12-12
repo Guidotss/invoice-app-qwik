@@ -16,8 +16,18 @@ export const useUiStore = () => {
     }
   });
 
+  const openSideMenu = $(() => {
+    uiState.isSideMenuOpen = true;
+  });
+  const closeSideMenu = $(() => {
+    uiState.isSideMenuOpen = false;
+  });
+
   return {
     isDarkMode: useComputed$(() => uiState.isDarkmode),
+    isSideMenuOpen: useComputed$(() => uiState.isSideMenuOpen),
     toggleTheme,
+    openSideMenu,
+    closeSideMenu,
   };
 };

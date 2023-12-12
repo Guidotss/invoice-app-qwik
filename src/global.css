@@ -56,3 +56,8 @@
 .btn { 
   @apply text-light-gray font-bold rounded-full px-5 outline-none
 }
+
+.input { 
+  @apply outline-none rounded-md bg-charcoal-blue  px-5 py-3 text-light-gray focus:outline-none focus:ring-2 focus:ring-deep-purple focus:ring-opacity-50
+}
+

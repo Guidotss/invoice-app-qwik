@@ -17,9 +17,9 @@ export default component$(() => {
           column
           q:slot="header-titles"
           title="Invoices"
-          titleStyles="text-white text-4xl font-bold mb-2"
+          titleStyles={`${isDarkMode.value ? 'text-white' : 'text-deep-purple'} text-4xl font-bold mb-2`}
           subtitle="There are 7 total invoices"
-          subtitleStyles="font-semibold"
+          subtitleStyles={`${isDarkMode.value ? 'text-light-gray' : 'text-soft-periwinkle'}  font-semibold`}
         />
         <div
           q:slot="buttons-container"

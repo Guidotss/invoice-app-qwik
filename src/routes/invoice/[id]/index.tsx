@@ -43,18 +43,24 @@ export default component$(() => {
           Go back
         </Link>
       </div>
-      <Header styles={`${isDarkMode.value ? 'bg-midnight-blue' : 'bg-white shadow-md'} rounded-lg 2xl:p-8 p-5 transition-colors`}>
+      <Header
+        styles={`${
+          isDarkMode.value ? "bg-midnight-blue" : "bg-white shadow-md"
+        } rounded-lg 2xl:p-8 p-5 transition-colors`}
+      >
         <HeaderTitles
           q:slot="header-titles"
           circleDecorator
           title="Status"
           subtitle={invoice?.status || "Loading..."}
-          titleStyles="text-light-gray text-xl font-bold mr-5"
+          titleStyles={`${
+            isDarkMode.value ? "text-light-gray" : "text-deep-purple"
+          } text-xl font-bold mr-5`}
           subtitleStyles={`${statusColor} ${textColor} font-bold text-xl px-5 py-2 rounded-md`}
           circleDecoratorStyles={`${circleStyles} mr-2 mt-1`}
         />
         <div q:slot="buttons-container" class="flex w-1/2 justify-center gap-2">
-          <HeaderActionButtons isDarkMode={isDarkMode.value}/>
+          <HeaderActionButtons />
         </div>
       </Header>
 
