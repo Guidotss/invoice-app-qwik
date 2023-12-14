@@ -11,7 +11,7 @@ export default component$(() => {
       onClick$={closeSideMenu}
     >
       <div
-        class={`animate__animated animate__slideInLeft animate__faster flex h-screen w-[30vw] flex-col px-6 py-10 ${
+        class={`animate__animated animate__slideInLeft animate__faster flex h-screen 2xl:w-[30vw] md:w-[40vw] flex-col px-6 py-10 ${
           isDarkMode.value ? "bg-midnight-blue" : "bg-light-gray"
         }`}
         onClick$={(event: QwikMouseEvent) => {

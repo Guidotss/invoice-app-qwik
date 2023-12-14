@@ -11,7 +11,7 @@ export default component$(({ invoice }: Props) => {
   const { isDarkMode } = useUiStore();
   return (
     <div
-      class={`invoice-scroll mt-5 w-2/3 overflow-y-scroll rounded-lg p-10 transition-colors 2xl:mt-10 2xl:w-1/2 ${
+      class={`invoice-scroll mt-5 w-2/3 overflow-y-auto rounded-lg p-10 transition-colors 2xl:mt-10 2xl:w-1/2 ${
         isDarkMode.value ? "bg-midnight-blue" : "bg-white shadow-md"
       }`}
     >

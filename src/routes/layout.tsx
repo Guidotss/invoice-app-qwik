@@ -23,7 +23,7 @@ export default component$(() => {
   
   return (
     <Providers>
-      <main class="flex overflow-hidden">
+      <main class="flex">
         <Sidebar />
         <SideMenu />
         <Slot />

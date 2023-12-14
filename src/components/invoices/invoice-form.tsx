@@ -2,7 +2,7 @@ import { component$ } from "@builder.io/qwik";
 
 export default component$(({ isDarkMode }: { isDarkMode: boolean }) => {
   return (
-    <form class="mt-10 flex flex-col overflow-y-auto">
+    <form class="mt-10 flex flex-col overflow-hidden ">
       <h3 class="mb-5 font-semibold text-purple">Bill from</h3>
       <div class="flex flex-col">
         <label
@@ -18,7 +18,8 @@ export default component$(({ isDarkMode }: { isDarkMode: boolean }) => {
           placeholder="19 Union Terrace"
         />
       </div>
-      <div class="mt-10 flex items-center gap-x-5">
+
+      <div class="invoice-scroll flex items-center gap-x-5 overflow-x-auto mt-10">
         <div class="flex flex-col">
           <label
             for="bill-from-city"
@@ -31,11 +32,11 @@ export default component$(({ isDarkMode }: { isDarkMode: boolean }) => {
           <input
             id="bill-from-city"
             type="text"
-            class="input w-40"
+            class="input mb-2 w-40"
             placeholder="London"
           />
         </div>
-        <div class="flex flex-col ">
+        <div class="w-full">
           <label
             for="bill-from-post-code"
             class={`mb-2 ${
@@ -67,6 +68,40 @@ export default component$(({ isDarkMode }: { isDarkMode: boolean }) => {
             placeholder="United Kingdom"
           />
         </div>
+      </div>
+      <div class="flex gap-x-10">
+        <div class="flex flex-col justify-center">
+          <label
+            for="invoice-date"
+            class={`${isDarkMode ? "text-periwinkle" : "text-purple"} mb-2`}
+          >
+            Invoice Date
+          </label>
+          <input id="invoice-date" type="date" class="input w-50" />
+        </div>
+        <div class="flex flex-col">
+          <label
+            for="payment-terms"
+            class={`${isDarkMode ? "text-periwinkle" : "text-purple"} mb-2`}
+          >
+            Payment Terms
+          </label>
+          <input id="payment-terms" type="date" class="input w-50" />
+        </div>
+      </div>
+      <div class="flex flex-col">
+        <label
+          for="project-description"
+          class={`${isDarkMode ? "text-periwinkle" : "text-purple"} mb-2`}
+        >
+          Project Description"
+        </label>
+        <input
+          id="project-description"
+          type="text"
+          class="input"
+          placeholder="Graphic Design Service"
+        />
       </div>
     </form>
   );

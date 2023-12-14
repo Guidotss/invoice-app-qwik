@@ -26,7 +26,7 @@ export default component$(() => {
 
   return (
     <div
-      class={`flex w-full flex-col items-center justify-center transition-colors ${
+      class={`flex w-full h-screen flex-col items-center justify-center transition-colors ${
         isDarkMode.value ? "bg-midnight-black" : "bg-light-gray"
       }`}
     >
