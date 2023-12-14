@@ -11,7 +11,7 @@ export default component$(() => {
   const { invoices } = useContext(InvoiceContext);
   const { isDarkMode } = useUiStore(); 
   return (
-    <div class={`flex h-screen w-full flex-col items-center justify-center  ${isDarkMode.value ? "bg-midnight-black" : "bg-light-gray"}`}>
+    <div class={`flex h-screen w-full flex-col items-center justify-center  ${isDarkMode.value ? "bg-midnight-black" : "bg-light-gray"} overflow-hidden`}>
       <Header styles="mt-10">
         <HeaderTitles
           column

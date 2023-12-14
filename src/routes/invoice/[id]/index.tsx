@@ -28,8 +28,7 @@ export default component$(() => {
     <div
       class={`flex w-full h-screen flex-col items-center justify-center transition-colors ${
         isDarkMode.value ? "bg-midnight-black" : "bg-light-gray"
-      }`}
-    >
+      }`}    >
       <div class="mb-3 flex w-2/3 items-center gap-x-3 2xl:w-1/2">
         <i>
           <ArrowLeft />

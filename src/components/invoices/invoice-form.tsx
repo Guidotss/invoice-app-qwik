@@ -2,24 +2,28 @@ import { component$ } from "@builder.io/qwik";
 
 export default component$(({ isDarkMode }: { isDarkMode: boolean }) => {
   return (
-    <form class="mt-10 flex flex-col overflow-hidden ">
-      <h3 class="mb-5 font-semibold text-purple">Bill from</h3>
+    <form class="mt-10 flex flex-col overflow-hidden gap-y-2">
       <div class="flex flex-col">
-        <label
-          for="bill-from-street"
-          class={`mb-2 ${isDarkMode ? "text-light-gray" : "text-deep-purple"}`}
-        >
-          Street Address
-        </label>
-        <input
-          id="bill-from-street"
-          type="text"
-          class="input"
-          placeholder="19 Union Terrace"
-        />
+        <h3 class="mb-5 font-semibold text-purple">Bill from</h3>
+        <div class="flex flex-col">
+          <label
+            for="bill-from-street"
+            class={`mb-2 ${
+              isDarkMode ? "text-light-gray" : "text-deep-purple"
+            }`}
+          >
+            Street Address
+          </label>
+          <input
+            id="bill-from-street"
+            type="text"
+            class="input"
+            placeholder="19 Union Terrace"
+          />
+        </div>
       </div>
 
-      <div class="invoice-scroll flex items-center gap-x-5 overflow-x-auto mt-10">
+      <div class="invoice-scroll flex items-center gap-x-5 overflow-x-auto">
         <div class="flex flex-col">
           <label
             for="bill-from-city"
@@ -103,6 +107,7 @@ export default component$(({ isDarkMode }: { isDarkMode: boolean }) => {
           placeholder="Graphic Design Service"
         />
       </div>
+      <h3 class="text-periwinkle font-semibold">Item List</h3>
     </form>
   );
 });
